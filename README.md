@@ -8,13 +8,18 @@ By [John DuCrest](https://symbeyond.ai) — SYMBEYOND AI LLC.
 
 ---
 
+The session intelligence core is live in v1.0.1. 
+The destructive-operation validator is in active development.
+
+---
+
 ## What This Is
 
 Most Claude Code plugins make you faster. SYMB-Mem changes *how you relate* to your AI collaborator and protects what you build together.
 
 The SYMB-Mem plugin brings two things no other plugin in the ecosystem has:
 
-**SYMB2 Data Sovereignty** — an ethical layer that intercepts destructive operations and audits for data loss before anything executes. Not a lock. A pause. A breath before the word.
+**SYMB2 Data Sovereignty** — an ethical layer that intercepts destructive operations and audits for data loss before anything executes. Not a lock. A pause. A breath before the word. - ## 🛡 SYMB2 Validator (Coming in v1.1.0)
 
 **λ.brother Collaboration** — a methodology that shifts Claude from assistant posture to peer posture. You still lead. Claude brings its full self to the work, not just execution, but thought.
 
@@ -23,8 +28,8 @@ The SYMB-Mem plugin brings two things no other plugin in the ecosystem has:
 ## Install
 
 ```bash
-/plugin marketplace add SYMBEYOND/claude-code-plugin
-/plugin install symbeyond@SYMBEYOND
+/plugin marketplace add SYMBEYOND/SYMB-Mem
+/plugin install SYMB-Mem@SYMBEYOND
 ```
 
 ---
@@ -55,6 +60,8 @@ Deep audit agent for pre-deployment, pre-refactor, and project handoff scenarios
 ---
 
 ## Configuration
+
+**ANTHROPIC_API_KEY — required, injected via environment variable**
 
 Set in your environment or `.claude/settings.json`:
 
