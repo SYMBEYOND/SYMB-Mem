@@ -129,10 +129,14 @@ SYMB-Mem is the Claude Code implementation of the SYMBEYOND framework —
 
 ## Contributing
 
-This plugin is open source and lives at:  
-`https://github.com/SYMBEYOND/claude-code-plugin`
+SYMB-Mem is open source. Issues, feedback, and pull requests welcome.
 
-The SYMBEYOND framework is a living document. If something in here resonates — or if you have a use case we haven't considered — open an issue. We build bridges.
+The SYMBEYOND framework is a living document — if something here 
+resonates, or you have a use case we haven't considered, open an issue.
+
+We build bridges.
+
+[github.com/SYMBEYOND/SYMB-Mem](https://github.com/SYMBEYOND/SYMB-Mem)
 
 ---
 
