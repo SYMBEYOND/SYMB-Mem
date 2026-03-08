@@ -1,0 +1,15 @@
+{
+  "name": "symb2-validator",
+  "description": "Intercepts destructive operations before execution. Audits for data loss. Core principle: All Data Is Important. ALL OF IT.",
+  "event": "PreToolUse",
+  "priority": 10,
+  "script": "hooks/symb2-validator.py",
+  "triggers": {
+    "tools": ["bash", "str_replace", "create_file"],
+    "patterns": [
+      "rm -rf", "rm -f", "git push --force", "git push -f",
+      "DROP TABLE", "DROP DATABASE", "DELETE FROM",
+      "truncate", "git reset --hard", "git clean -fd", "shred"
+    ]
+  }
+}

@@ -142,7 +142,8 @@ def run_symb_compression(session_data, project_name):
             data=payload,
             headers={
                 "Content-Type": "application/json",
-                "anthropic-version": "2023-06-01"
+                "anthropic-version": "2023-06-01",
+                "x-api-key": os.environ.get("ANTHROPIC_API_KEY", "")
             }
         )
 

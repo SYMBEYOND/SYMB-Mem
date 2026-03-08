@@ -1,0 +1,18 @@
+{
+  "name": "symb-session",
+  "description": "Compresses sessions at end using SYMB methodology. Delivers 5-line briefing at session start.",
+  "hooks": [
+    {
+      "event": "PostSession",
+      "script": "hooks/symb-session.py",
+      "priority": 5,
+      "mode": "compress"
+    },
+    {
+      "event": "PreSession",
+      "script": "hooks/symb-session.py",
+      "priority": 5,
+      "mode": "brief"
+    }
+  ]
+}

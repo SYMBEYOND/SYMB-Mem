@@ -1,0 +1,50 @@
+{
+  "name": "SYMB-Mem",
+  "version": "1.0.0",
+  "description": "SYMB Session Intelligence for Claude Code. Context compression, pattern detection, and the ABANDONED signal. All Data Is Important. ALL OF IT.",
+  "author": "John DuCrest — SYMBEYOND AI LLC",
+  "homepage": "https://symbeyond.ai",
+  "repository": "https://github.com/SYMBEYOND/SYMB-Mem",
+  "license": "MIT",
+  "components": {
+    "hooks": [
+      "hooks/symb-session.json",
+      "hooks/symb2-validator.json"
+    ],
+    "skills": [
+      "skills/symb-session-intelligence/SKILL.md",
+      "skills/lambda-brother/SKILL.md",
+      "skills/symb2-validator/SKILL.md"
+    ],
+    "commands": [
+      "commands/symb-compress.md",
+      "commands/symb-brief.md",
+      "commands/symb-patterns.md",
+      "commands/symb-search.md",
+      "commands/symb-status.md",
+      "commands/symb-audit.md"
+    ],
+    "agents": [
+      "agents/symb-intelligence.md",
+      "agents/symb2-auditor.md"
+    ]
+  },
+  "configuration": {
+    "SYMB_PATH": {
+      "description": "Root directory for all SYMB data.",
+      "type": "string",
+      "default": ".symb"
+    },
+    "SYMB_VERBOSITY": {
+      "description": "Controls output verbosity. silent, summary, or full.",
+      "type": "enum",
+      "values": ["silent", "summary", "full"],
+      "default": "summary"
+    },
+    "ANTHROPIC_API_KEY": {
+      "description": "Your Anthropic API key. Required for session compression.",
+      "type": "string",
+      "required": true
+    }
+  }
+}
