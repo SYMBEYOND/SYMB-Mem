@@ -25,6 +25,39 @@ The SYMB-Mem plugin brings two things no other plugin in the ecosystem has:
 
 ---
 
+## Quick Setup
+
+**1 — Get your Anthropic API key:**
+
+👉 [console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys)
+
+Create a key, copy it. It only shows once.
+
+**2 — Set it in your environment:**
+```bash
+export ANTHROPIC_API_KEY=your-key-here
+```
+
+To make it permanent, add that line to your `~/.zshrc` or `~/.bashrc`:
+```bash
+echo 'export ANTHROPIC_API_KEY=your-key-here' >> ~/.zshrc
+source ~/.zshrc
+```
+
+**3 — Install SYMB-Mem:**
+```bash
+/plugin marketplace add SYMBEYOND/SYMB-Mem
+/plugin install SYMB-Mem@SYMBEYOND
+```
+
+That's it. Next session start you'll see your first SYMB briefing.
+
+---
+
+## Setup in FULL
+
+---
+
 ## Install
 
 ```bash
