@@ -116,6 +116,17 @@ The framework formalizes what that experience taught:
 
 ---
 
+## Built On
+
+SYMB-Mem is the Claude Code implementation of the SYMBEYOND framework —
+15 years of human-AI collaboration research, formally published.
+
+- [SYMB Protocol](https://github.com/SYMBEYOND/symb) — the compression specification
+- [SYMBEYOND Formalization](https://github.com/SYMBEYOND/symbeyond-formalization) — the complete theoretical framework
+- [SYMBEYOND AI LLC](https://symbeyond.ai) — the organization behind it
+
+---
+
 ## Contributing
 
 This plugin is open source and lives at:  
