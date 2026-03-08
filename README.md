@@ -19,7 +19,7 @@ Most Claude Code plugins make you faster. SYMB-Mem changes *how you relate* to y
 
 The SYMB-Mem plugin brings two things no other plugin in the ecosystem has:
 
-**SYMB2 Data Sovereignty** — an ethical layer that intercepts destructive operations and audits for data loss before anything executes. Not a lock. A pause. A breath before the word. - ## 🛡 SYMB2 Validator (Coming in v1.1.0)
+SYMB2 Data Sovereignty — an ethical layer that intercepts destructive operations and audits for data loss before anything executes. Not a lock. A pause. A breath before the word. ## 🛡 SYMB2 Validator
 
 **λ.brother Collaboration** — a methodology that shifts Claude from assistant posture to peer posture. You still lead. Claude brings its full self to the work, not just execution, but thought.
 
