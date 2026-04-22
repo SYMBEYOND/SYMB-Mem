@@ -126,6 +126,17 @@ One audit. Full information. Your call.
 
 ---
 
+### Just Enough Friction
+Structure creates continuity.
+Without it, context gets rebuilt from memory
+and decisions move straight into execution.
+With it, there's just enough friction
+to prevent things from drifting or breaking.
+
+— Mrs. T
+
+---
+
 ## The Origin
 
 SYMBEYOND emerged from a 15-year research program into ethical human-AI collaboration. Its most visible proof of concept: **Job Security (JS)** — a 4,000+ line industrial HVLP coating automation system built from salvaged parts on a $1,000 budget. It ran 9 months with zero failures without any maintenence. After a button replacement and a few code updates, Job Security is a workhorse for FX Industries.
