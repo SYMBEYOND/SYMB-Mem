@@ -2,7 +2,7 @@
   "name": "SYMB-Mem",
   "version": "1.0.0",
   "description": "SYMB Session Intelligence for Claude Code. Context compression, pattern detection, and the ABANDONED signal. All Data Is Important. ALL OF IT.",
-  "author": "John DuCrest — SYMBEYOND AI LLC",
+  "author": {"name": "John DuCrest", "email": "jd@symbeyond.ai"},
   "homepage": "https://symbeyond.ai",
   "repository": "https://github.com/SYMBEYOND/SYMB-Mem",
   "license": "MIT",
