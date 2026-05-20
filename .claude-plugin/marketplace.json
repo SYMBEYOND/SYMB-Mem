@@ -1,0 +1,19 @@
+{
+  "name": "SYMB-Mem",
+  "owner": {
+    "name": "SYMBEYOND AI LLC",
+    "email": "jd@symbeyond.ai",
+    "url": "https://symbeyond.ai"
+  },
+  "description": "SYMB Session Intelligence | context compression for Claude Code. All Data Is Important.",
+  "plugins": [
+    {
+      "name": "SYMB-Mem",
+      "description": "SYMB Session Intelligence | context compression for Claude Code. All Data Is Important.",
+      "source": {
+        "source": "github",
+        "repo": "SYMBEYOND/SYMB-Mem"
+      }
+    }
+  ]
+}
