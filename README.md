@@ -13,6 +13,12 @@ The destructive-operation validator is in active development.
 
 ---
 
+## Using an AI assistant?
+
+Start with [REPO_BOOT.md](REPO_BOOT.md) — a quick orientation for any LLM (Claude, ChatGPT, or other) on what this repo is, how it works, and how to collaborate with it effectively.
+
+---
+
 ## What This Is
 
 Most Claude Code plugins make you faster. SYMB-Mem changes *how you relate* to your AI collaborator and protects what you build together.
