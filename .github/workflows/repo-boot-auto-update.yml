@@ -1,0 +1,65 @@
+name: ReBoot Auto Update
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - REPO_BOOT.md
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reboot-update-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update-repo-boot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Run ReBoot doctor
+        run: python3 .reboot/reboot.py doctor
+
+      - name: Run V1 contract tests
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python3 -m unittest discover -s tests -p 'test_reboot_v1_contract.py' -v
+
+      - name: Update the managed block
+        run: python3 .reboot/reboot.py update
+
+      - name: Verify the updated result
+        run: python3 .reboot/reboot.py check
+
+      - name: Check for REPO_BOOT changes
+        id: diff
+        run: |
+          if git diff --quiet -- REPO_BOOT.md; then
+            echo "REPO_BOOT.md already current."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "REPO_BOOT.md changed."
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit REPO_BOOT update
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add REPO_BOOT.md
+          git commit -m "docs: auto-update REPO_BOOT"
+          git push

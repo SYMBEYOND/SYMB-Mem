@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "repository": {
+    "purpose": "Repository state and orientation management",
+    "audience": "Builders, maintainers, and AI collaborators",
+    "status": "Production"
+  },
+  "orientation": {
+    "important_files": [],
+    "important_directories": [],
+    "generated_paths": [],
+    "safe_commands": [],
+    "resume_loop": [],
+    "do_not_touch": [],
+    "known_risks": []
+  },
+  "privacy": {
+    "exclude_globs": [],
+    "include_commit_subjects": false,
+    "include_remote_url": false
+  },
+  "history": {
+    "enabled": false,
+    "depth": 10
+  },
+  "automation": {
+    "branch": "main",
+    "enabled": true,
+    "include_return_payload": true
+  }
+}
