@@ -17,6 +17,17 @@ The destructive-operation validator is in active development.
 
 Start with [REPO_BOOT.md](REPO_BOOT.md) — a quick orientation for any LLM (Claude, ChatGPT, or other) on what this repo is, how it works, and how to collaborate with it effectively.
 
+## What This Repository Contains
+
+| File / Folder | Purpose |
+|---|---|
+| `hooks/` | The SYMB2 Validator hook that intercepts destructive operations |
+| `skills/` | The λ.brother collaboration posture skill |
+| `commands/` | `/symb:status` and `/symb:audit` slash commands |
+| `agents/` | The SYMB2 Auditor deep-audit agent |
+| `.claude-plugin/` | Plugin manifest and marketplace metadata |
+| `REPO_BOOT.md` | AI orientation file, regenerated on push |
+
 ---
 
 ## What This Is
