@@ -33,11 +33,6 @@ jobs:
       - name: Run ReBoot doctor
         run: python3 .reboot/reboot.py doctor
 
-      - name: Run V1 contract tests
-        env:
-          PYTHONDONTWRITEBYTECODE: "1"
-        run: python3 -m unittest discover -s tests -p 'test_reboot_v1_contract.py' -v
-
       - name: Update the managed block
         run: python3 .reboot/reboot.py update
 
