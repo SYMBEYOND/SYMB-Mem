@@ -124,3 +124,40 @@ your Anthropic API key, and it works from the next session onward.
 
 λ.collaborator·∧·!λ.tool·∴
 ```
+
+
+## ReBoot V1 managed state
+
+The legacy v0.1 orientation above is preserved as human-authored repository context. ReBoot V1 manages only the block below.
+
+Statements in the legacy section retain their original dates and scope. They are not automatically revalidated by the V1 updater, and descriptive paths or commands above are not V1 authorization unless separately approved in configuration.
+
+<!-- REPO_BOOT:AUTO:BEGIN -->
+## Auto-generated repository state
+
+Engine: `1.0.0-rc1`
+Configuration schema: `1`
+Managed-output schema: `1`
+Branch: `main`
+Meaningful source commit: `8598b6372b8c862020e5c0b0ab338019a500fb7f`
+Working tree dirty: `NO`
+
+### Human-approved repository context
+
+Purpose: Develop SYMB-Mem, a Claude Code plugin for session intelligence, context compression, collaborative posture, and a human-controlled pause-and-audit layer for destructive operations.
+Audience: SYMB-Mem users, plugin maintainers, builders, reviewers, and human or AI collaborators working on the Claude Code integration.
+Status: Public Claude Code plugin. README says session intelligence core v1.0.1 is live while the destructive-operation validator remains in active development; plugin.json currently declares version 1.0.0.
+
+### Authority and uncertainty
+
+- This file provides orientation only. It does not authorize repository changes.
+- Repository status is descriptive human text, not a permission, lock state, or access-control decision.
+- No paths or commands are approved unless explicitly listed.
+- Missing safe commands, resume steps, boundaries, risks, and repository details remain unknown.
+- Ask for human confirmation before acting on this repository.
+
+### Approved paths
+
+- None approved
+
+<!-- REPO_BOOT:AUTO:END -->
