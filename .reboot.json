@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "repository": {
-    "purpose": "Repository state and orientation management",
-    "audience": "Builders, maintainers, and AI collaborators",
-    "status": "Production"
+    "purpose": "Develop SYMB-Mem, a Claude Code plugin for session intelligence, context compression, collaborative posture, and a human-controlled pause-and-audit layer for destructive operations.",
+    "audience": "SYMB-Mem users, plugin maintainers, builders, reviewers, and human or AI collaborators working on the Claude Code integration.",
+    "status": "Public Claude Code plugin. README says session intelligence core v1.0.1 is live while the destructive-operation validator remains in active development; plugin.json currently declares version 1.0.0."
   },
   "orientation": {
     "important_files": [],
