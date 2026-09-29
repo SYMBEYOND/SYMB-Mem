@@ -49,10 +49,14 @@ jobs:
 
             python3 .reboot/reboot.py doctor
 
-            python3 -m unittest discover \
-              -s tests \
-              -p 'test_reboot_v1_contract.py' \
-              -v
+            if [ -d tests ]; then
+              python3 -m unittest discover \
+                -s tests \
+                -p 'test_reboot_v1_contract.py' \
+                -v
+            else
+              echo "Note: No tests directory found, skipping contract tests."
+            fi
 
             python3 .reboot/reboot.py update
             python3 .reboot/reboot.py check
