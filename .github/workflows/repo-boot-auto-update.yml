@@ -23,6 +23,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Set up Python
@@ -30,31 +31,47 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Run ReBoot doctor
-        run: python3 .reboot/reboot.py doctor
-
-      - name: Update the managed block
-        run: python3 .reboot/reboot.py update
-
-      - name: Verify the updated result
-        run: python3 .reboot/reboot.py check
-
-      - name: Check for REPO_BOOT changes
-        id: diff
+      - name: Update and publish REPO_BOOT safely
+        shell: bash
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
         run: |
-          if git diff --quiet -- REPO_BOOT.md; then
-            echo "REPO_BOOT.md already current."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "REPO_BOOT.md changed."
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
+          set -euo pipefail
 
-      - name: Commit REPO_BOOT update
-        if: steps.diff.outputs.changed == 'true'
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add REPO_BOOT.md
-          git commit -m "docs: auto-update REPO_BOOT"
-          git push
+
+          for attempt in 1 2 3; do
+            echo "===== ReBoot publish attempt ${attempt}/3 ====="
+
+            git fetch origin main
+            git checkout -B main origin/main
+
+            python3 .reboot/reboot.py doctor
+
+            python3 -m unittest discover \
+              -s tests \
+              -p 'test_reboot_v1_contract.py' \
+              -v
+
+            python3 .reboot/reboot.py update
+            python3 .reboot/reboot.py check
+
+            if git diff --quiet -- REPO_BOOT.md; then
+              echo "REPO_BOOT.md already current"
+              exit 0
+            fi
+
+            git add REPO_BOOT.md
+            git commit -m "docs: auto-update REPO_BOOT"
+
+            if git push origin HEAD:main; then
+              echo "ReBoot publish succeeded"
+              exit 0
+            fi
+
+            echo "Remote main moved during publish; regenerating from current main."
+          done
+
+          echo "ERROR: ReBoot could not publish after 3 synchronized attempts."
+          exit 1
