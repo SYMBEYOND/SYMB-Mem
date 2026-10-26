@@ -42,25 +42,19 @@ SYMB2 Data Sovereignty — an ethical layer that intercepts destructive operatio
 
 ---
 
-## 💙 Free Core, and the SYMB-Builder Tier
+## 💙 Free Core and future SYMBEYOND Pro
 
 **The SYMB-Mem core is free. Forever.**
 Session intelligence, compression, the SYMB briefing, pattern detection, and the
 λ.brother collaboration posture stay free and open for everyone. Nothing that
 works today moves behind a paywall.
 
-**SYMB-Builder — $5/month · Founding 100**
-For builders who want to support the work and go deeper. SYMB-Builder is the
-community and builder tier. It funds development and includes advanced builder
-features and ongoing SYMB-Mem builder updates as they ship.
-
-- Join the first 100 → https://www.patreon.com/16163910/join
-- SYMBEYOND on Patreon → https://www.patreon.com/c/SYMBEYONDAI
-- Start here → https://www.patreon.com/posts/welcome-to-ai-160176413
+SYMBEYOND is developing separately licensed Pro capabilities and updates. The former
+Patreon SYMB-Builder enrollment is retired. No Pro subscription is currently offered
+through this repository. See [symbeyond.ai](https://symbeyond.ai) for future availability.
 
 **Scope — please read.**
-SYMB-Builder is a community and builder tier for individual developers. It is
-**not** an enterprise or safety license. It does **not** include, and must not be
+Future Pro licensing is not an enterprise or safety license by default. It does **not** include, and must not be
 relied on for, industrial, oil and gas, nuclear, aviation, medical, or any other
 high-stakes, safety-critical, or regulated use. The public SYMB-Mem core is
 general developer tooling provided as-is, without warranty. Commercial deployment
